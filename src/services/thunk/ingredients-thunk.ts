@@ -5,5 +5,5 @@ import { getIngredientsApi } from '@api';
 
 export const fetchIngredients = createAsyncThunk<TIngredient[]>(
   `${INGREDIENTS_SLICE_NAME}/fetchIngredients`,
-  async () => getIngredientsApi()
+  getIngredientsApi
 );

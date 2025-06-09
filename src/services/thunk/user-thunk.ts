@@ -15,7 +15,7 @@ import { userActions } from '../slices/user';
 // получение информации о текущем пользователе (проверяет пользователя по токену)
 export const fetchUser = createAsyncThunk(
   `${USER_SLICE_NAME}/fetchUser`,
-  async () => await getUserApi()
+  getUserApi
 );
 
 export const registerUser = createAsyncThunk(
@@ -40,7 +40,7 @@ export const loginUser = createAsyncThunk(
 
 export const updateUser = createAsyncThunk(
   `${USER_SLICE_NAME}/updateUser`,
-  async (user: Partial<TRegisterData>) => await updateUserApi(user)
+  updateUserApi
 );
 
 export const logout = createAsyncThunk(

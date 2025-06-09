@@ -38,6 +38,20 @@ export const burgerConstructorSlice = createSlice({
     clearConstructor: (state) => {
       state.bun = null;
       state.ingredients = [];
+    },
+    moveUp: (state, action: PayloadAction<number>) => {
+      const index = action.payload;
+      // Сохраняем перемещаемый ингредиент
+      const movingIngredient = state.ingredients[index];
+      // Перемещаем его на позицию выше
+      state.ingredients[index] = state.ingredients[index - 1];
+      state.ingredients[index - 1] = movingIngredient;
+    },
+    moveDown: (state, action: PayloadAction<number>) => {
+      const index = action.payload;
+      const movingIngredient = state.ingredients[index];
+      state.ingredients[index] = state.ingredients[index + 1];
+      state.ingredients[index + 1] = movingIngredient;
     }
   },
   selectors: {

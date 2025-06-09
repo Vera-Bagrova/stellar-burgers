@@ -4,5 +4,5 @@ import { getFeedsApi } from '@api';
 
 export const fetchFeeds = createAsyncThunk(
   `${FEED_SLICE_NAME}/fetchFeeds`,
-  async () => await getFeedsApi()
+  getFeedsApi
 );

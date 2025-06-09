@@ -4,10 +4,10 @@ import { getOrderByNumberApi, orderBurgerApi } from '@api';
 
 export const fetchNewOrder = createAsyncThunk(
   `${ORDER_SLICE_NAME}/fetchNewOrder`,
-  async (data: string[]) => await orderBurgerApi(data)
+  orderBurgerApi
 );
 
 export const fetchOrderByNumber = createAsyncThunk(
   `${ORDER_SLICE_NAME}/fetchOrderbyNumber`,
-  async (number: number) => await getOrderByNumberApi(number)
+  getOrderByNumberApi
 );

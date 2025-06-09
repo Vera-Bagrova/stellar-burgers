@@ -5,5 +5,5 @@ import { getOrdersApi } from '@api';
 // получение списка заказов пользователя
 export const fetchOrders = createAsyncThunk(
   `${ORDERS_SLICE_NAME}/fetchOrders`,
-  async () => await getOrdersApi()
+  getOrdersApi
 );
