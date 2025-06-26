@@ -3,7 +3,7 @@ import { RequestStatus, TIngredient } from '@utils-types';
 import { INGREDIENTS_SLICE_NAME } from './sliceNames';
 import { fetchIngredients } from '../thunk/ingredients-thunk';
 
-type TIngredientsState = {
+export type TIngredientsState = {
   ingredients: TIngredient[];
   status: RequestStatus;
   error?: string | null;

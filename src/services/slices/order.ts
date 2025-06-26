@@ -3,7 +3,7 @@ import { ORDER_SLICE_NAME } from './sliceNames';
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchNewOrder, fetchOrderByNumber } from '../thunk/order-thunk';
 
-type TOrderState = {
+export type TOrderState = {
   order: TOrder | null; // Текущий заказ, отображаемый в модальном окне
   orderByNumber: TOrder | null; // данные о заказе по номеру
   isLoading: boolean;
